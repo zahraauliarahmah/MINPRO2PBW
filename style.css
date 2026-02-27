@@ -1,0 +1,120 @@
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+
+/* NAV BAR */
+.glass-nav {
+background: rgba(135,206,250,0.6);
+backdrop-filter: blur(10px);
+}
+
+/* HOME */
+.zara {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 50%;
+    border: 5px solid transparent;
+
+    background: 
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #a1c4fd, #c2e9fb, #87cefa) border-box;
+
+    box-shadow: 0 10px 30px rgba(135, 206, 250, 0.3);
+
+    display: block;
+    margin: 100px auto 40px auto;
+}
+
+.big-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 180px;
+font-weight: 800;
+color: rgba(95,179,245,0.15);
+letter-spacing: 10px;
+z-index: 1;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+}
+
+.hero-model {
+width: 350px;
+border-radius: 20px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.year-text {
+font-size: 90px;
+font-weight: 800;
+color: #5fb3f5;
+}
+
+.hero-name {
+font-weight: 700;
+color: #2c3e50;
+}
+
+.hero-desc {
+color: #555;
+}
+
+.btn-baby {
+background: #5fb3f5;
+color: white;
+border-radius: 30px;
+padding: 10px 25px;
+transition: 0.3s;
+}
+
+.btn-baby:hover {
+background: #3498db;
+color: white;
+}
+
+/* SECTIONS */
+.section-title {
+color: #5fb3f5;
+font-weight: 700;
+}
+
+.gradient-bg {
+background: linear-gradient(135deg,#5fb3f5,#87cefa);
+}
+
+/* CARDS */
+.project-card, .cert-card {
+border: none;
+border-radius: 20px;
+transition: 0.3s;
+}
+
+.project-card:hover,
+.cert-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-text {
+line-height: 1.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+.big-text {
+font-size: 100px;
+}
+.hero-model {
+width: 250px;
+}
+.year-text {
+font-size: 60px;
+}
+}
