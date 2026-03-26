@@ -1,3 +1,7 @@
+<?php
+include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +9,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zahra Portfolio</title>
 
-<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<div id="app">
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top glass-nav">
@@ -38,7 +38,7 @@
 </div>
 </nav>
 
-<!-- HERO EDITORIAL -->
+<!-- HERO -->
 <section id="home" class="hero-editorial">
 
 <div class="big-text">PORTFOLIO</div>
@@ -51,18 +51,24 @@
 </div>
 
 <div class="col-md-4 text-center">
-    <img src="images/zara.png" class="zara">
+<img src="images/zara.png" class="zara">
 </div>
 
 <div class="col-md-4 hero-right">
-<h2 class="hero-name">{{ name }}</h2>
-<p class="hero-desc">
-Hai Semuanya, aku Zara, sorang mahasiswa yang memiliki semangat belajar tinggi dan tertarik pada bidang teknologi. 
-Saya percaya bahwa konsistensi dan kemauan untuk terus belajar adalah kunci untuk berkembang di dunia digital yang terus berubah.
-</p>
-<a href="#about" class="btn btn-baby mt-3">Explore More</a>
-</div>
 
+<h2 class="hero-name">
+Zahra Aulia Rahmah
+</h2>
+
+<p class="hero-desc">
+Hai semuanya, aku Zara, seorang mahasiswa yang memiliki semangat belajar tinggi dan tertarik pada bidang teknologi.
+</p>
+
+<a href="#about" class="btn btn-baby mt-3">
+Explore More
+</a>
+
+</div>
 </div>
 </div>
 
@@ -70,110 +76,162 @@ Saya percaya bahwa konsistensi dan kemauan untuk terus belajar adalah kunci untu
 
 <!-- ABOUT -->
 <section id="about" class="py-5 bg-white">
+
 <div class="container">
-<h2 class="text-center section-title mb-5">About Me</h2>
+
+<h2 class="text-center section-title mb-5">
+About Me
+</h2>
 
 <div class="row align-items-center">
+
 <div class="col-md-6">
-<img src="images/laptop.jpg" class="img-fluid rounded-4 shadow">
+
+<img src="images/laptop.jpg"
+class="img-fluid rounded-4 shadow">
+
 </div>
 
 <div class="col-md-6">
+
 <p class="about-text">
-Sebagai mahasiswi Sistem Informasi, ini sebuah progress dan saya masih banyak belajar tentang permograman dan desain 
+Sebagai mahasiswi Sistem Informasi, ini sebuah progress dan saya masih banyak belajar tentang pemrograman dan desain.
 </p>
 
-<div v-for="skill in skills">
-<label>{{ skill.name }}</label>
+<?php
+
+$query = mysqli_query($conn, "SELECT * FROM skill");
+
+echo "<br>Jumlah data: " . mysqli_num_rows($query) . "<br>";
+
+while ($row = mysqli_fetch_assoc($query)) {
+
+?>
+
+<label>
+<?php echo $row['name']; ?>
+</label>
+
 <div class="progress mb-3">
+
 <div class="progress-bar bg-info"
-:style="{width: skill.level + '%'}">
-{{ skill.level }}%
+style="width: <?php echo $row['level']; ?>%;">
+
+<?php echo $row['level']; ?>%
+
 </div>
+
 </div>
-</div>
+
+<?php } ?>
 
 </div>
 </div>
 </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="py-5 gradient-bg">
+
 <div class="container">
-<h2 class="text-center text-white mb-5">Zara Projects</h2>
+
+<h2 class="text-center text-white mb-5">
+Zara Projects
+</h2>
 
 <div class="row g-4">
-<div class="col-md-4" v-for="project in projects">
+
+<?php
+
+$query = mysqli_query($conn, "SELECT * FROM project");
+
+while($row = mysqli_fetch_assoc($query)){
+
+?>
+
+<div class="col-md-4">
+
 <div class="card project-card h-100">
-<img :src="project.image" class="card-img-top">
+
+<img src="images/<?php echo $row['image']; ?>"
+class="card-img-top">
+
 <div class="card-body">
-<h5>{{ project.title }}</h5>
-<p>{{ project.desc }}</p>
+
+<h5>
+<?php echo $row['title']; ?>
+</h5>
+
+<p>
+<?php echo $row['description']; ?>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<?php } ?>
 
 </div>
 </div>
-</div>
-</div>
-</div>
+
 </section>
 
 <!-- CERTIFICATES -->
 <section id="certificates" class="py-5 bg-white">
+
 <div class="container">
-<h2 class="text-center section-title mb-5">Certificates</h2>
+
+<h2 class="text-center section-title mb-5">
+Certificates
+</h2>
 
 <div class="row g-4">
-<div class="col-md-3" v-for="cert in certificates">
+
+<?php
+
+$query = mysqli_query($conn, "SELECT * FROM certificates");
+
+while($row = mysqli_fetch_assoc($query)){
+
+?>
+
+<div class="col-md-3">
+
 <div class="card cert-card text-center h-100">
-<img :src="cert.image" class="card-img-top">
+
+<img src="images/<?php echo $row['image']; ?>"
+class="card-img-top">
+
 <div class="card-body">
-<h6>{{ cert.title }}</h6>
-<small class="text-muted">{{ cert.year }}</small>
-</div>
-</div>
-</div>
+
+<h6>
+<?php echo $row['title']; ?>
+</h6>
+
+<small class="text-muted">
+<?php echo $row['year']; ?>
+</small>
+
 </div>
 
 </div>
+
+</div>
+
+<?php } ?>
+
+</div>
+</div>
+
 </section>
 
 <footer class="text-center py-4 gradient-bg text-white">
 © Zahra Aulia Rahmah
 </footer>
-
-</div>
-
-<!-- Vue -->
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-<script>
-const { createApp } = Vue
-
-createApp({
-data() {
-return {
-name: "Zahra Aulia Rahmah",
-skills: [
-{name:"HTML", level:80},
-{name:"CSS", level:85},
-{name:"JavaScript", level:75},
-{name:"UI/UX", level:90}
-],
-projects: [
-{title:"Aplikasi Kasir", desc:"Aplikasi Kasir UMKM.", image:"images/project1.jpeg"},
-{title:"Portfolio Dashboard", desc:"Web-based project.", image:"images/project2.jpg"},
-{title:"AVD", desc:"Interactive Tableau dashboard.", image:"images/project3.jpg"}
-],
-certificates: [
-{title:"Lomba Poster Nasional", year:"2021", image:"images/sertifikat.png"},
-{title:"Kepengurusan Inforsa", year:"2025/2026", image:"images/sertif2.png"},
-
-]
-}
-}
-}).mount('#app')
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
