@@ -147,30 +147,39 @@ After tampilan website setelah diisi di database
 # Teknologi yang Digunakan
 
 1. HTML (HyperText Markup Language)
+
 HTML digunakan sebagai bahasa dasar untuk membangun struktur halaman website. Dalam project ini, HTML digunakan untuk membuat bagian-bagian utama seperti navbar, halaman Home, About, Projects, dan Certificates sehingga halaman website dapat tersusun dengan baik.
 
 2. CSS (Cascading Style Sheets)
+
 CSS digunakan untuk mengatur tampilan dan desain website agar terlihat lebih menarik dan rapi. Pada project ini, CSS digunakan untuk mengatur warna, ukuran teks, layout halaman, serta memperindah tampilan keseluruhan website.
 
 3. Bootstrap
+
 Bootstrap digunakan sebagai framework CSS untuk membantu membuat tampilan website menjadi responsif dan modern. Dalam project ini, Bootstrap digunakan untuk membuat komponen seperti navbar, card, button, dan progress bar sehingga tampilan website lebih cepat dikembangkan dan dapat menyesuaikan dengan berbagai ukuran layar.
 
 4. PHP (Hypertext Preprocessor)
+
 PHP digunakan sebagai bahasa pemrograman server-side untuk menghubungkan website dengan database. Dalam project ini, PHP digunakan untuk mengambil data dari database dan menampilkannya secara dinamis pada halaman website, seperti data skill, project, dan certificates.
 
 5. MySQL
+
 MySQL digunakan sebagai sistem manajemen database untuk menyimpan data yang digunakan dalam website. Pada project ini, MySQL digunakan untuk menyimpan data skill, project, dan certificates sehingga data dapat dikelola dengan lebih terstruktur.
 
 6. phpMyAdmin
+
 phpMyAdmin digunakan sebagai tools untuk mengelola database MySQL secara mudah melalui tampilan berbasis web. Dalam project ini, phpMyAdmin digunakan untuk membuat database, membuat tabel, serta menambahkan dan mengubah data pada database.
 
 6. Laragon
+
 Laragon digunakan sebagai web server lokal untuk menjalankan website dan database selama proses pengembangan. Dengan menggunakan Laragon, website dapat diuji dan dijalankan secara offline di komputer.
 
 7. Visual Studio Code (VS Code)
+
 Visual Studio Code digunakan sebagai code editor untuk menulis dan mengedit kode program. Dalam project ini, VS Code digunakan untuk membuat dan mengelola file seperti HTML, CSS, dan PHP.
 
 8. Git dan GitHub
+
 Git digunakan sebagai version control system untuk mencatat dan mengelola perubahan kode program, sedangkan GitHub digunakan sebagai tempat penyimpanan project secara online. Dalam project ini, GitHub digunakan untuk menyimpan hasil project Mini Project 2 sehingga dapat diakses dan dibagikan dengan mudah.
 
 
