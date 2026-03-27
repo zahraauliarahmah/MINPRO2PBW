@@ -70,7 +70,35 @@ diisi dengan ini, dipastikan nama database dan didalam kodenya sama persis
 
 # Hasil
 
-1. Halaman About
+1. Navbar
+  berada di bagian atas halaman dan berfungsi sebagai navigasi utama untuk berpindah antar section.
+
+Menu yang tersedia:
+- Home
+- About
+- Projects
+- Certificates
+
+Navbar dapat ditekan dan langsung memunculkan section yang kita ingin lihat. 
+
+<img width="1885" height="898" alt="image" src="https://github.com/user-attachments/assets/1dcafdf1-26df-41eb-b8b6-a7c2cc218ca9" />
+
+2. Home
+  Hero section merupakan bagian pertama yang dilihat ketika website dibuka.  
+Bagian ini berisi:
+
+- Judul besar “Portfolio”
+- Tahun
+- Foto profil berbentuk lingkaran dengan border gradient
+- Nama lengkap
+- Deskripsi singkat tentang diri
+- Tombol navigasi ke section About
+
+Layout menggunakan Bootstrap Grid System (`row`, `col-md-4`) sehingga konten tersusun rapi dan seimbang.  
+Styling tambahan seperti background, shadow, dan efek hover dibuat menggunakan CSS.
+
+
+3. Halaman About
    
 Before tampilan website sebelim diisi didatabase
 
@@ -84,7 +112,7 @@ After tampilan website setelah diisi di database
 
 <img width="1915" height="892" alt="Cuplikan layar 2026-03-26 155948" src="https://github.com/user-attachments/assets/6a65c763-b085-41ea-9b63-e347b1641612" />
 
-2. Halaman Project
+4. Halaman Project
 
 Before tampilan website sebelim diisi didatabase
 
@@ -100,7 +128,7 @@ After tampilan website setelah diisi di database
 
 <img width="1919" height="906" alt="Cuplikan layar 2026-03-26 160922" src="https://github.com/user-attachments/assets/e1e69db9-f755-47fc-ac4f-2913bcd0b5cc" />
 
-3. Halaman Certifikat
+5. Halaman Certifikat
 
 Before tampilan website sebelim diisi didatabase
 
